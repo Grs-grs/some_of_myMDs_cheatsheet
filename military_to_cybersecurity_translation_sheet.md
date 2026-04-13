@@ -62,21 +62,81 @@ That is why military thinking transfers so well into cyber.
 | Entry/exit logbook | Authentication logs, access logs, audit trail | Records who entered, when, and how |
 | Patrol noticing broken lock or open gate | Misconfiguration alert, privilege abuse alert, unauthorized change | Physical or digital sign of compromise |
 
-### IDS and IPS in military terms
+## IDS and IPS in military terms
 
-| Concept | Military Analogy |
+### Core analogy
+
+| Concept | Military analogy |
 |---|---|
-| IDS | Sentinel/lookout who sees danger and reports it |
-| IPS | Armed guard at the gate who can physically stop entry |
-| False positive in IPS | Friendly fire / stopping innocents |
-| False negative in IPS | Failing to stop the attacker |
+| IDS | A sentinel/lookout who observes the perimeter, identifies suspicious movement, and reports it to the command post |
+| IPS | An armed guard at the gate/checkpoint who can actively stop, detain, or block the threat before it enters |
+| Detection | Identifying that something suspicious or hostile is happening |
+| Prevention | Taking immediate action to stop the threat from advancing |
 
-### Fast summary
+---
 
-- **IDS** sees and reports.
-- **IPS** sees and acts.
-- **EDR** is like a highly instrumented internal watcher inside the base itself.
+### IDS outcomes in military terms
 
+| Outcome | What it means | Military analogy |
+|---|---|---|
+| True Positive (TP) | A real attack is detected correctly | The sentinel spots an actual enemy patrol approaching and raises the alarm |
+| False Positive (FP) | Legitimate activity is incorrectly flagged as an attack | The sentinel mistakes a friendly patrol or authorized vehicle for an enemy force |
+| True Negative (TN) | Legitimate activity is correctly ignored | The sentinel sees routine friendly movement and does not trigger an alert |
+| False Negative (FN) | A real attack is missed | The sentinel fails to notice the enemy infiltrating the perimeter |
+
+---
+
+### IPS outcomes in military terms
+
+| Outcome | What it means | Military analogy |
+|---|---|---|
+| True Positive (TP) | A real attack is correctly identified and stopped | The armed guard recognizes an actual hostile intruder and prevents entry |
+| False Positive (FP) | Legitimate activity is incorrectly stopped | The guard blocks or engages a friendly unit, civilian, or authorized person |
+| True Negative (TN) | Legitimate activity is correctly allowed | The guard verifies that the person is authorized and lets them pass |
+| False Negative (FN) | A real attack is not stopped | The guard fails to stop an actual attacker, allowing the threat to enter |
+
+---
+
+### Quick intuition
+
+| Scenario | IDS view | IPS view |
+|---|---|---|
+| Enemy detected | "I saw the threat." | "I saw the threat and stopped it." |
+| Innocent mistaken as hostile | Unnecessary alarm | Wrongful blocking / friendly interference |
+| Friendly movement correctly ignored | No alert raised | Access allowed normally |
+| Enemy not noticed or not stopped | Threat passes unnoticed | Threat gets through the gate |
+
+---
+
+### Easy way to remember
+
+- **True Positive** = real threat, correctly identified  
+- **False Positive** = no real threat, but treated like one  
+- **True Negative** = no real threat, correctly ignored/allowed  
+- **False Negative** = real threat, but missed or not stopped  
+
+---
+
+### Practical military-style summary
+
+- **IDS is like surveillance and reporting**
+  - It watches
+  - It identifies
+  - It alerts
+  - But it does not physically stop the intrusion
+
+- **IPS is like an armed checkpoint**
+  - It watches
+  - It identifies
+  - It acts immediately
+  - It can block the hostile movement before entry
+
+---
+
+### Simple mental model
+
+- **IDS = "See and report."**
+- **IPS = "See and stop."**
 ---
 
 ## 3. Access Control, Identity, and Trust
